@@ -9,7 +9,7 @@ document.getElementById('fetchColorsButton').addEventListener('click', async () 
     fetchButton.style.display = 'none';
     loadingIndicator.style.display = 'block';
 
-    const response = await fetch('https://back-end-one-tau.vercel.app/scrape', {
+    const response = await fetch('https://color-catcher-backend.vercel.app/api/scrape', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
