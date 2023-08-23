@@ -7,10 +7,10 @@ As cores coletadas são exibidas como uma paleta de cores, onde você pode clica
 Uma animação sutil é exibida quando uma cor é copiada.
 
 # Tecnologias Utilizadas
-HTML
-CSS
-JavaScript
-Node.js (para a parte de scraping das cores do site)
+ - HTML
+ - CSS
+ - JavaScript
+ - Node.js (para a parte de scraping das cores do site)
 
 # Considerações finais
 Este projeto foi desenvolvido como uma ferramenta prática e divertida para explorar paletas de cores em sites de maneira rápida e fácil. Sinta-se à vontade para contribuir, melhorar ou personalizar conforme suas necessidades!
