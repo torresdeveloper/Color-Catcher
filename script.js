@@ -5,7 +5,7 @@ document.getElementById('fetchColorsButton').addEventListener('click', async () 
     const fetchButton = document.getElementById('fetchColorsButton');
     const loadingIndicator = document.getElementById('loadingIndicator');
 
-    //mostra animação de loading
+    
     fetchButton.style.display = 'none';
     loadingIndicator.style.display = 'block';
 
@@ -63,10 +63,9 @@ function copyColorToClipboard(color) {
     copyNotification.style.display = 'block';
     setTimeout(() => {
         copyNotification.style.display = 'none';
-    }, 2000); // Exibe a notificação por 2 segundos
+    }, 2000); 
 }
 
-// Oculta a notificação ao carregar a página
 window.onload = () => {
     const copyNotification = document.getElementById('copyNotification');
     copyNotification.style.display = 'none';
