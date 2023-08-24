@@ -9,7 +9,7 @@ document.getElementById('fetchColorsButton').addEventListener('click', async () 
     fetchButton.style.display = 'none';
     loadingIndicator.style.display = 'block';
 
-    const response = await fetch('http://3.134.78.116:4000/api/scrape', {
+    const response = await fetch('https://color-catcher-backend.matheustorresdev.com.br/api/scrape', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
