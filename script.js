@@ -65,6 +65,11 @@ function copyColorToClipboard(color) {
         copyNotification.style.display = 'none';
     }, 2000); 
 }
+document.getElementById('testButton').addEventListener('click', () => {
+    const testInput = document.getElementById('testInput').value;
+    const testBody = document.getElementById('colorBody')
+    testBody.style.backgroundColor = testInput;
+});
 
 window.onload = () => {
     const copyNotification = document.getElementById('copyNotification');

@@ -7,19 +7,45 @@
         <link rel="stylesheet" href="styles.css">
         <title>Color Catcher</title>
     </head>
-    <body>
-        <div class="container">
-            <h1>Color Catcher</h1>
-            <p>Informe a URL do site para coletar as cores:</p>
-            <input type="text" id="urlInput" placeholder="Digite a URL aqui">
-            <button id="fetchColorsButton">Coletar Cores</button>
-            <p id="errorMessage" class="error-message"></p>
-            <div id="loadingIndicator" class="loading-indicator">
-                <div class="spinner"></div>
+    <body id="colorBody">
+        <header>
+            <div class="logo">
+                <h1>Color Catcher</h1>
             </div>
-            <div id="colorsContainer" class="colors-container"></div>
-            <p id="copyNotification" class="copy-notification">Cor copiada!</p>
-        </div>
+            <nav class="link-bar">
+                <ul>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="main-content">
+                <div class="container">
+                    <div class="title-block">
+                        <p>Informe a URL do site para coletar as cores:</p>
+                    </div>
+                    <div>
+                        <input type="text" id="urlInput" placeholder="Digite a URL aqui...">
+                        <button id="fetchColorsButton">Coletar Cores</button>
+                    </div>
+                    
+                    <p id="errorMessage" class="error-message"></p>
+                    <div id="loadingIndicator" class="loading-indicator">
+                        <div class="spinner"></div>
+                    </div>
+                    <div id="colorsContainer" class="colors-container"></div>
+                    <p id="copyNotification" class="copy-notification">Cor copiada!</p>
+                </div>
+                <div class="test">
+                    <input id="testInput" placeholder="Teste a cor saqui...">
+                    <button id="testButton">Testar cor</button>
+                </div>
+            </section>
+            
+        </main>
+        
         
         <script src="script.js"></script>
     </body>
