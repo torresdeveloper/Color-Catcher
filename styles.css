@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Kanit&family=Montserrat:wght@900&family=Nunito:wght@700&family=Open+Sans&family=Ubuntu:wght@700&family=Wallpoet&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Kanit&family=Montserrat:wght@900&family=Open+Sans&family=Ubuntu:wght@700&family=Wallpoet&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Gluten:wght@200;500&family=Kanit&family=Montserrat:wght@900&family=Nunito:wght@700&family=Open+Sans&family=Ubuntu:wght@700&family=Wallpoet&family=Yatra+One&display=swap');
 /* Reset */
 * {
     margin: 0;
@@ -18,7 +18,6 @@ body {
 
 header {
     background-color: #121212;
-    font-family: 'Cherry Bomb One', cursive;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -27,10 +26,14 @@ header {
 }
 
 .logo {
-    color: #b3b3b3;
+    color: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
+    font-family: 'Gluten', cursive;
+    background-image: radial-gradient(circle at 50% -20.71%, #ff86bd 0, #ff86ac 5%, #ff889c 10%, #ff8b8d 15%, #ff907e 20%, #ff956f 25%, #ff9c62 30%, #ffa256 35%, #ffa84c 40%, #ffaf43 45%, #f2b53c 50%, #e4bb38 55%, #d5c038 60%, #c6c53b 65%, #b5ca41 70%, #a3ce4a 75%, #91d155 80%, #7cd462 85%, #64d770 90%, #44d97f 95%, #00db8f 100%);
 }
 
 .link-bar ul {
@@ -41,21 +44,24 @@ header {
 }
 
 ul a {
+    background-image: linear-gradient(180deg, #b4f2a0 0, #a1ec9c 16.67%, #89e397 33.33%, #6cd890 50%, #49cd8a 66.67%, #10c488 83.33%, #00bd88 100%);
     text-decoration: none;
-    color: #b3b3b3;
+    color: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     transition: color 0.2s ease-in-out;
 }
 
-ul a:hover {
-    color: white;
-}
+
+
 
 #main-content {
-    width: 90%;
+    width: 80%;
     margin-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 main{
@@ -64,15 +70,16 @@ main{
 }
 
 .container {
-    width: 50%;
-    max-width: 80%;
+    width: 80%;
     justify-content: space-evenly;
+    flex: 2;
 }
 
 .test {
-    max-width: 60%;
+    width: 60%;
     justify-content: center;
     height: 200px;
+    flex: 1;
 }
 
 .test, .container{
@@ -83,7 +90,10 @@ main{
     padding: 20px;
     display: flex;
     flex-direction: column;
-    
+}
+.title-block{
+    margin-bottom: 20px;
+    font-size: 1rem;
 }
 
 #urlInput,
@@ -119,6 +129,16 @@ main{
 #fetchColorsButton:hover,
 #testButton:hover {
     background-color: #1ed760;
+}
+
+#colorsContent{
+    background-color: #282828;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 5px;
+    display: none;
+    width: 80%;
 }
 
 .color-box {
@@ -179,13 +199,51 @@ main{
     100% { transform: rotate(360deg); }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 539px) {
+
+    header{
+        align-items: center;
+    }
+    header nav{
+        display: none;
+    }
+    .logo{
+        font-size: 80%;
+    }
 
     #main-content{
-        flex-wrap: wrap;
-        
+        flex-direction: column;
+        margin: 10px;
+        flex-wrap: nowrap;
+        align-items: center;
+        width: 100%;
     }
-    .test, .container{
-        min-width: 400px;
+    .test, .container, #colorsContent{
+       width: 100%;
+    }
+    #colorsContent{
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 540px) and (max-width: 895px) {
+
+    .logo{
+        font-size: 80%;
+    }
+    #main-content{
+        flex-direction: column;
+        margin: 10px;
+        flex-wrap: nowrap;
+        align-items: center;
+        width: 100%;
+    }
+
+    .test, .container, #colorsContent{
+       width: 70%;
+    }
+
+    #colorsContent{
+        text-align: center;
     }
 }

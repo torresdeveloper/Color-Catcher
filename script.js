@@ -1,11 +1,13 @@
 
 document.getElementById('fetchColorsButton').addEventListener('click', async () => {
     clearErrorMessage();
+    clearColorsContainer();
     const url = document.getElementById('urlInput').value;
     const fetchButton = document.getElementById('fetchColorsButton');
     const loadingIndicator = document.getElementById('loadingIndicator');
+    const colorsContent = document.getElementById('colorsContent')
 
-    
+    colorsContent.style.display = 'none'
     fetchButton.style.display = 'none';
     loadingIndicator.style.display = 'block';
 
@@ -17,9 +19,9 @@ document.getElementById('fetchColorsButton').addEventListener('click', async () 
         body: JSON.stringify({ url })
     });
 
-    //Esconde animação de loading
     loadingIndicator.style.display = 'none';
     fetchButton.style.display = 'block';
+    colorsContent.style.display = 'block'
 
     if (response.ok) {
         const data = await response.json();
@@ -43,6 +45,11 @@ document.getElementById('fetchColorsButton').addEventListener('click', async () 
 function clearErrorMessage() {
     const errorMessage = document.getElementById('errorMessage');
     errorMessage.textContent = '';
+}
+
+function clearColorsContainer(){
+    const colors = document.getElementById('colorsContainer')
+    colors.textContent = ''
 }
 
 function rgbToHex(rgb) {
