@@ -7,8 +7,7 @@ document.getElementById('fetchColorsButton').addEventListener('click', async () 
     const loadingIndicator = document.getElementById('loadingIndicator');
     const colorsContent = document.getElementById('colorsContent')
 
-    colorsContent.style.display = 'none'
-    fetchButton.style.display = 'none';
+    fetchButton.style.display = 'nones';
     loadingIndicator.style.display = 'block';
 
     const response = await fetch('https://color-catcher-backend.matheustorresdev.com.br/api/scrape', {
@@ -38,7 +37,8 @@ document.getElementById('fetchColorsButton').addEventListener('click', async () 
         });
     } else {
         const errorMessage = document.getElementById('errorMessage');
-        errorMessage.textContent = 'Erro ao obter as cores. Verifique a URL e tente novamente.';
+        colorsContent.style.display = 'none'
+        errorMessage.textContent = 'Verifique a URL e tente novamente.';
     }
 });
 
