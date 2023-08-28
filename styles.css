@@ -26,12 +26,12 @@ header {
     border-bottom: 1px dotted #FF0066;
 }
 
-.logo {
+.logo a{
     color: #FF0066;
     font-size: 1.2rem;
     font-weight: bold;
     letter-spacing: .5rem;
-   
+    text-decoration: none;
 }
 
 .link-bar ul {
@@ -44,7 +44,7 @@ header {
 ul a {
     color: antiquewhite;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: .9rem;
     letter-spacing: .2rem;
 }
 ul a:hover{
@@ -210,7 +210,7 @@ main{
         font-size: 65%;
     }
     ul a{
-        font-size: 40%;
+        font-size: 45%;
     }
 
     #main-content{
@@ -222,11 +222,16 @@ main{
     }
     .test, .container, #colorsContent{
        width: 100%;
+       height: 200px;
     }
 
     #colorsContent{
         text-align: center;
     }
+    .test{
+        flex: none;
+    }
+
 }
 
 @media screen and (min-width: 540px) and (max-width: 930px) {
