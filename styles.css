@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -26,7 +27,11 @@ header {
     border-bottom: 1px dotted #FF0066;
 }
 
-.logo a{
+#logo h1 {
+    transition: color 0.5s ease-in-out;
+}
+
+#logo a {
     color: #FF0066;
     font-size: 1.2rem;
     font-weight: bold;
@@ -47,7 +52,7 @@ ul a {
     font-size: .9rem;
     letter-spacing: .2rem;
 }
-ul a:hover{
+ul a:hover {
     color: #FF0066;
 }
 
@@ -61,7 +66,7 @@ ul a:hover{
     
 }
 
-main{
+main {
     display: flex;
     justify-content: center;
     
@@ -75,15 +80,15 @@ main{
     flex: 1;
 }
 
-.test, .container{
-    height: 200px;
+.test, .container {
     background-color: #282828;
+    height: 220px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 10px;
-    padding: 10px 20px;
+    padding: 20px 18px;
 }
-.title-block{
+.title-block {
     margin: 15px 0;
     font-size: 1rem;
     color: #fefefe;
@@ -126,7 +131,7 @@ main{
     background-color: #fc4e93;
 }
 
-#colorsContent{
+#colorsContent {
     background-color: #282828;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -151,7 +156,7 @@ main{
     cursor: pointer;
 }
 
-.error-message{
+.error-message {
     font-size: 1rem;
     color: #f70f0f;
     margin: 15px 0;
@@ -200,46 +205,49 @@ main{
 
 @media screen and (max-width: 539px) {
 
-    header{
+    header {
         padding: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    .logo{
+
+    #logo a {
         font-size: 65%;
     }
-    ul a{
+
+    ul a {
         font-size: 45%;
     }
 
-    #main-content{
+    #main-content {
         flex-direction: column;
         margin: 20px;
         flex-wrap: nowrap;
         align-items: center;
         width: 100%;
     }
-    .test, .container, #colorsContent{
+
+    .test, .container, #colorsContent {
        width: 100%;
-       height: 200px;
     }
 
-    #colorsContent{
+    #colorsContent {
         text-align: center;
     }
-    .test{
+
+    .test {
         flex: none;
     }
-
 }
 
 @media screen and (min-width: 540px) and (max-width: 930px) {
 
-    .logo{
+    #logo a{
         font-size: 80%;
     }
-    #main-content{
+
+    #main-content {
         flex-direction: column;
         margin: 10px;
         flex-wrap: nowrap;
@@ -247,11 +255,12 @@ main{
         width: 100%;
     }
 
-    .test, .container, #colorsContent{
+    .test, .container, #colorsContent {
        width: 70%;
+       font-size: 80%;
     }
 
-    #colorsContent{
+    #colorsContent {
         text-align: center;
     }
 }
